@@ -1,0 +1,41 @@
+{
+  "name": "churn",
+  "version": "1.0.0",
+  "description": "Churn TV (Front End)",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheUnassigned/Churn.git"
+  },
+  "keywords": [
+    "churn",
+    "tv",
+    "video",
+    "channel"
+  ],
+  "author": "Unassigned",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/TheUnassigned/Churn/issues"
+  },
+  "homepage": "https://github.com/TheUnassigned/Churn#readme",
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "html-webpack-plugin": "^2.25.0",
+    "standard": "^8.6.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  }
+}
