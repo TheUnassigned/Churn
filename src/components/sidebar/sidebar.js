@@ -1,6 +1,8 @@
 /** @jsx h */
 import { h } from 'preact'
 import Button from '../button/button'
+import ChannelInfo from './channelInfo'
+import ChannelVideos from './channelVideos'
 import styles from './sidebar.css'
 
 const Sidebar = props => {
@@ -12,6 +14,8 @@ const Sidebar = props => {
           <Button link='/' text='More channels' />
         </div>
       </div>
+      <ChannelInfo channelInfo={props.channelInfo} />
+      <ChannelVideos channelInfo={props.channelInfo} />
     </div>
   )
 }
