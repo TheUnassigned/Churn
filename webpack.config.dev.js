@@ -1,4 +1,5 @@
 var path = require('path')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
 
@@ -23,6 +24,17 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
+        test: /\.css/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: { importLoaders: 1, modules: true, localIdentName: '[name]__[local]___[hash:base64:5]' }
+          }
+        ],
+        include: path.resolve(__dirname, './src')
+      },
+      {
         test: /\.(xml|html|txt|md)$/,
         loader: 'raw-loader'
       },
@@ -32,6 +44,14 @@ module.exports = {
       }
     ]
   },
+
+  plugins: [
+    new ExtractTextPlugin({
+      filename: 'style.css',
+      disable: false,
+      allChunks: true
+    })
+  ],
 
   stats: { colors: true },
 
@@ -43,7 +63,6 @@ module.exports = {
     publicPath: '/',
     contentBase: './src',
     historyApiFallback: true,
-    open: true,
     proxy: {
       // OPTIONAL: proxy configuration:
       // '/optional-prefix/**': { // path pattern to rewrite

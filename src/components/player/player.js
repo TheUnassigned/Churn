@@ -1,16 +1,15 @@
 /** @jsx h */
 import { h, Component } from 'preact'
-import Channel from '../channel/channel'
 
-class App extends Component {
+class Player extends Component {
 
   render (props, state) {
     return (
       <div>
-        <Channel />
+        <span>I'm a video player</span>
       </div>
     )
   }
 }
 
-export default App
+export default Player
