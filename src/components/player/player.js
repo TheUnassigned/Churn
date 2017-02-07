@@ -1,15 +1,13 @@
 /** @jsx h */
-import { h, Component } from 'preact'
+import { h } from 'preact'
+import styles from './player.css'
 
-class Player extends Component {
-
-  render (props, state) {
-    return (
-      <div>
-        <span>I'm a video player</span>
-      </div>
-    )
-  }
+const Player = props => {
+  return (
+    <div class={styles.player}>
+      <div id='player' />
+    </div>
+  )
 }
 
 export default Player

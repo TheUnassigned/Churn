@@ -1,7 +1,8 @@
 /** @jsx h */
 import { h, Component } from 'preact'
 import Player from '../player/player'
-import styles from './style.css'
+import Sidebar from '../sidebar/sidebar'
+import styles from './channel.css'
 
 class Channel extends Component {
 
@@ -12,7 +13,7 @@ class Channel extends Component {
           <Player />
         </div>
         <div class={styles.sidebar}>
-
+          <Sidebar />
         </div>
       </div>
     )

@@ -1,0 +1,19 @@
+.btn {
+    font-family: sans-serif;
+    display: inline-block;
+    border-radius: 100px;
+    height: 32px;
+    font-size: 16px;
+    line-height: 32px;
+    padding: 0 15px;
+    color: #14BAA7;
+    border: 2px solid #14BAA7;
+    background-color: #FFF;
+    font-weight: 300;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+.btn:hover {
+    background-color: #14BAA7;
+    color: #FFF;
+}
