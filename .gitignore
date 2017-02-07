@@ -2,3 +2,5 @@ node_modules
 personal_notes.txt
 /npm-debug.log
 .DS_Store
+.vscode
+dist
