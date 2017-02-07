@@ -1,0 +1,112 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.list{
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #fff;
+}
+.list-header{
+  height: 50px;
+}
+.list-header .logo{
+  height: 34px;
+  padding: 8px;
+}
+.list-header .button{
+  float: right;
+  display: inline-block;
+  border-radius: 100px;
+  height: 32px;
+  margin: 7px;
+  font-size: 16px;
+  line-height: 32px;
+  padding: 0 15px;
+  color: #14BAA7;
+  border: 2px solid #14BAA7;
+  background-color: #FFF;
+  font-weight: 300;
+}
+.list-header .button:hover{
+  color: #FFF;
+  background-color: #14BAA7;
+  cursor: pointer;
+}
+
+.list-logo{
+  height: 150px;
+  background-color: #000;
+  background-image: url(/img/channel.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.list-videos{
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  overflow-y: scroll;
+  padding-bottom: 10px;
+}
+
+.list-video{
+  width: 280px;
+  height: 158px;
+  background-color: #000;
+  margin: 10px 10px 0px 10px;
+  position: relative;
+}
+.list-video-thumb{
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.7;
+}
+.list-video-thumb.playing{
+  opacity: 1;
+}
+.list-video-thumb.lv1{
+  background-image: url(https://i.ytimg.com/vi/2lNCj1_zZTk/hqdefault.jpg);
+}
+.list-video-thumb.lv2{
+  background-image: url(https://i.ytimg.com/vi/DDW4hTWbRYs/hqdefault.jpg);
+}
+.list-video-thumb.lv3{
+  background-image: url(https://i.ytimg.com/vi/TRJoTkPc6ig/hqdefault.jpg);
+}
+.video-title{
+  font-size: 15px;
+  font-weight: 300;
+  padding: 15px 10px 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  letter-spacing: 0.3px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+.video-duration{
+  font-weight: 200;
+  font-size: 12px;
+}
+.player{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 300px;
+  background-color: #333132;
+}
