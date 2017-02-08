@@ -1,0 +1,49 @@
+.wrap {
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+    background-position: center;
+    background-size: cover;
+    background-color: #000;
+    cursor: pointer;
+    transition: opacity .2s ease;
+}
+.header {
+    padding: 15px 10px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    letter-spacing: 0.3px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    transition: background .2s ease;
+}
+.title {
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0;
+}
+.duration {
+    font-weight: 200;
+    font-size: 12px;
+}
+
+/* Hover State */
+.wrap:hover .header {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.9) 100%);
+}
+
+/* Active State */
+.isActive {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #14BAA7;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 3px 5px;
+    line-height: 1;
+}

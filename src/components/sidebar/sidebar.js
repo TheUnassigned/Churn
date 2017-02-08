@@ -2,7 +2,7 @@
 import { h } from 'preact'
 import Button from '../button/button'
 import ChannelInfo from './channelInfo'
-import ChannelVideos from './channelVideos'
+import VideoListing from '../video/videoListing'
 import styles from './sidebar.css'
 
 const Sidebar = props => {
@@ -15,7 +15,15 @@ const Sidebar = props => {
         </div>
       </div>
       <ChannelInfo channelInfo={props.channelInfo} />
-      <ChannelVideos channelInfo={props.channelInfo} />
+      <div class={styles.videoList}>
+        {props.channelInfo.recent_videos.map(video => {
+          return (
+            <div class={styles.videoListItem}>
+              <VideoListing video={video} isActive={props.activeVideo === video.youtube_id} onSelect={props.onUpdateActiveVideo} />
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

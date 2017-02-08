@@ -43,5 +43,7 @@
     "graphql-tag": "^1.2.4",
     "preact": "^7.1.0",
     "react-apollo": "^0.10.0"
+    "lodash": "^4.17.4",
+    "preact": "^7.1.0"
   }
 }

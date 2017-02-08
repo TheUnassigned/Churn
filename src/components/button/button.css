@@ -1,10 +1,9 @@
 .btn {
-    font-family: sans-serif;
     display: inline-block;
     border-radius: 100px;
-    height: 32px;
+    height: 36px;
     font-size: 16px;
-    line-height: 32px;
+    line-height: 34px;
     padding: 0 15px;
     color: #14BAA7;
     border: 2px solid #14BAA7;

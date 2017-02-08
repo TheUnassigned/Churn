@@ -4,3 +4,4 @@ personal_notes.txt
 .DS_Store
 .vscode
 dist
+stats.json
