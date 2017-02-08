@@ -3,6 +3,7 @@ import { h, Component } from 'preact'
 import Player from '../player/player'
 import Sidebar from '../sidebar/sidebar'
 import styles from './channel.css'
+import { findIndex } from 'lodash'
 
 class Channel extends Component {
   constructor (props) {
@@ -61,8 +62,9 @@ class Channel extends Component {
   }
 
   updateActiveVideo (newId) {
+    const newActiveVideo = findIndex(this.state.channelInfo.recent_videos, { 'youtube_id': newId })
     this.setState({
-      activeVideo: newId
+      activeVideo: newActiveVideo
     })
   }
 

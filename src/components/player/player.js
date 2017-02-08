@@ -3,7 +3,7 @@ import { h, Component } from 'preact'
 import styles from './player.css'
 
 class Player extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.player
@@ -14,6 +14,7 @@ class Player extends Component {
 
   componentDidMount () {
     const _this = this
+
     // Load YouTube api
     var script = document.createElement('script')
     script.type = 'text/javascript'
@@ -41,7 +42,7 @@ class Player extends Component {
   }
 
   componentDidUpdate (prevProps, prevState) {
-    if(prevProps.activeVideo !== this.props.activeVideo) {
+    if (prevProps.activeVideo !== this.props.activeVideo) {
       this.player.loadVideoById(this.props.activeVideo, 0)
     }
   }
