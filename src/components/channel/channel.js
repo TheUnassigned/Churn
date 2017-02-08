@@ -9,7 +9,7 @@ class Channel extends Component {
     super(props)
 
     this.state = {
-      activeVideo: '8LSwyqBLsZ0',
+      activeVideo: 0,
       channelInfo: {
         slug: 'testchannel',
         title: 'Test Channel',
@@ -57,6 +57,7 @@ class Channel extends Component {
     }
 
     this.updateActiveVideo = this.updateActiveVideo.bind(this)
+    this.handleVideoEnded = this.handleVideoEnded.bind(this)
   }
 
   updateActiveVideo (newId) {
@@ -65,14 +66,28 @@ class Channel extends Component {
     })
   }
 
+  handleVideoEnded () {
+    this.setState({
+      activeVideo: this.state.activeVideo + 1
+    })
+  }
+
   render (props, state) {
+    const activeVideo = state.channelInfo.recent_videos[state.activeVideo].youtube_id
     return (
       <div class={styles.container}>
         <div class={styles.player}>
-          <Player activeVideo={state.activeVideo} />
+          <Player
+            activeVideo={activeVideo}
+            onVideoEnded={this.handleVideoEnded}
+            />
         </div>
         <div class={styles.sidebar}>
-          <Sidebar channelInfo={state.channelInfo} activeVideo={state.activeVideo} onUpdateActiveVideo={this.updateActiveVideo} />
+          <Sidebar
+            channelInfo={state.channelInfo}
+            activeVideo={activeVideo}
+            onUpdateActiveVideo={this.updateActiveVideo}
+            />
         </div>
       </div>
     )

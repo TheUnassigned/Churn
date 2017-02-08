@@ -8,6 +8,8 @@ class Player extends Component {
 
     this.player
     this.YT_API_src = 'https://www.youtube.com/iframe_api'
+
+    this.onPlayerStateChange = this.onPlayerStateChange.bind(this)
   }
 
   componentDidMount () {
@@ -24,6 +26,12 @@ class Player extends Component {
         height: '390',
         width: '640',
         videoId: this.props.activeVideo,
+        playerVars: {
+          rel: 0,
+          modestbranding: 1,
+          showinfo: 0,
+          color: 'white'
+        },
         events: {
           'onReady': _this.onPlayerReady,
           'onStateChange': _this.onPlayerStateChange
@@ -43,7 +51,9 @@ class Player extends Component {
   }
 
   onPlayerStateChange (e) {
-
+    if (e.data == YT.PlayerState.ENDED) {
+      this.props.onVideoEnded()
+    }
   }
 
   render (props, state) {
