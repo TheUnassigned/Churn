@@ -2,53 +2,51 @@
 import { h, Component } from 'preact'
 import styles from './player.css'
 
+const YT_API_src = 'https://www.youtube.com/iframe_api'
+
 class Player extends Component {
   constructor (props) {
     super(props)
-
-    this.player
-    this.YT_API_src = 'https://www.youtube.com/iframe_api'
-
     this.onPlayerStateChange = this.onPlayerStateChange.bind(this)
   }
 
   componentDidMount () {
     const _this = this
 
+    // create promise player on api load and ready
+    _this.player = new Promise(resolve => {
+      window.onYouTubeIframeAPIReady = () => {
+        const _player = new YT.Player('player', {
+          videoId: this.props.activeVideo,
+          playerVars: {
+            autoplay: 1,
+            rel: 0,
+            modestbranding: 1,
+            showinfo: 0,
+            color: 'white',
+            disablekb: 1,
+  					autohide: 1,
+  					iv_load_policy: 3
+          },
+          events: {
+            'onReady': e => resolve(_player),
+            'onStateChange': _this.onPlayerStateChange
+          }
+        })
+      }
+    })
+
     // Load YouTube api
     var script = document.createElement('script')
     script.type = 'text/javascript'
-    script.src = _this.YT_API_src
+    script.src = YT_API_src
     document.body.appendChild(script)
-
-    // Create player
-    window.onYouTubeIframeAPIReady = () => {
-      _this.player = new YT.Player('player', {
-        height: '390',
-        width: '640',
-        videoId: this.props.activeVideo,
-        playerVars: {
-          rel: 0,
-          modestbranding: 1,
-          showinfo: 0,
-          color: 'white'
-        },
-        events: {
-          'onReady': _this.onPlayerReady,
-          'onStateChange': _this.onPlayerStateChange
-        }
-      })
-    }
   }
 
   componentDidUpdate (prevProps, prevState) {
     if (prevProps.activeVideo !== this.props.activeVideo) {
-      this.player.loadVideoById(this.props.activeVideo, 0)
+      this.player.then(p => p.loadVideoById(this.props.activeVideo, 0))
     }
-  }
-
-  onPlayerReady (e) {
-    e.target.playVideo()
   }
 
   onPlayerStateChange (e) {
