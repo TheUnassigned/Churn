@@ -3,7 +3,7 @@ import { h, Component } from 'preact'
 import Player from '../player/player'
 import Sidebar from '../sidebar/sidebar'
 import styles from './channel.css'
-import { findIndex } from 'lodash'
+import findIndex from 'lodash/findIndex'
 
 class Channel extends Component {
   constructor (props) {
