@@ -2,11 +2,24 @@
     background: #FFF;
 }
 .header {
-    padding: 8px;
+    height: 50px;
 }
 .logo {
     width: 124px;
+    margin: 8px;
 }
 .button {
     float: right;
+    margin: 7px;
+}
+.videoList {
+    position: absolute;
+    top: 200px;
+    bottom: 0;
+    padding-bottom: 10px;
+    overflow-y: scroll;
+}
+.videoListItem {
+    padding: 10px 10px 0;
+    width: 300px;
 }

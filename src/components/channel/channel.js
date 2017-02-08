@@ -18,8 +18,39 @@ class Channel extends Component {
         external_twitter: '',
         external_instagram: '',
         total_videos: 5,
-        recent_videos: '',
-        videos: ['8LSwyqBLsZ0','Dws45IJ_8Io','kvji3CYA51E','SGYhsHH1404','iSBbMhd43o']
+        recent_videos: [
+          {
+            channel_position: 0,
+            youtube_id: '8LSwyqBLsZ0',
+            title: '17 Types of Ah-Liens',
+            duration: '0:34'
+          },
+          {
+            channel_position: 0,
+            youtube_id: 'Dws45IJ_8Io',
+            title: 'Test',
+            duration: '0:34'
+          },
+          {
+            channel_position: 0,
+            youtube_id: 'kvji3CYA51E',
+            title: 'Test',
+            duration: '0:34'
+          },
+          {
+            channel_position: 0,
+            youtube_id: 'SGYhsHH1404',
+            title: 'Test',
+            duration: '0:34'
+          },
+          {
+            channel_position: 0,
+            youtube_id: 'vy_Ca_sCVjs',
+            title: 'Merry Christmas',
+            duration: '0:18'
+          }
+        ],
+        videos: ['8LSwyqBLsZ0','Dws45IJ_8Io','kvji3CYA51E','SGYhsHH1404','vy_Ca_sCVjs']
       }
     }
   }
