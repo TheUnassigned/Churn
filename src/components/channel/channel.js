@@ -24,7 +24,7 @@ class Channel extends Component {
         recent_videos: [
           {
             channel_position: 0,
-            youtube_id: '8LSwyqBLsZ0',
+            youtube_id: 'vy_Ca_sCVjs',
             title: '17 Types of Ah-Liens',
             duration: '0:34'
           },
@@ -48,7 +48,7 @@ class Channel extends Component {
           },
           {
             channel_position: 4,
-            youtube_id: 'vy_Ca_sCVjs',
+            youtube_id: '8LSwyqBLsZ0',
             title: 'Merry Christmas',
             duration: '0:18'
           }
