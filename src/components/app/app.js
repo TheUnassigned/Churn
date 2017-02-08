@@ -1,6 +1,6 @@
 /** @jsx h */
 import { h, Component } from 'preact'
-import Channel from '../channel/channel'
+import Channels from '../channels/channels'
 import styles from './app.css'
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
   render (props, state) {
     return (
       <div>
-        <Channel />
+        <Channels />
       </div>
     )
   }

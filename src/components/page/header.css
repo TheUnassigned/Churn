@@ -1,0 +1,16 @@
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 70px;
+    background-color: #FFF;
+    z-index: 10;
+}
+.headerGap {
+    height: 70px;
+}
+.logo {
+    height: 44px;
+    margin: 13px;
+}

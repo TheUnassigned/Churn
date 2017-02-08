@@ -1,0 +1,30 @@
+.pageWidth {
+    margin-left: auto;
+    margin-right: auto;
+    width: 92%;
+    max-width: 1000px;
+}
+.container {
+
+}
+.header {
+
+}
+.hero {
+
+}
+.main {
+    
+}
+.section {
+    padding: 40px 0;
+}
+.sectionTitle {
+    font-size: 30px;
+    color: #616161;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+.footer {
+
+}
