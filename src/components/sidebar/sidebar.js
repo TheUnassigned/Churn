@@ -17,7 +17,11 @@ const Sidebar = props => {
       <ChannelInfo channelInfo={props.channelInfo} />
       <div class={styles.videoList}>
         {props.channelInfo.recent_videos.map(video => {
-          return <div class={styles.videoListItem}><VideoListing video={video} /></div>
+          return (
+            <div class={styles.videoListItem}>
+              <VideoListing video={video} isActive={props.activeVideo === video.youtube_id} onSelect={props.onUpdateActiveVideo} />
+            </div>
+          )
         })}
       </div>
     </div>

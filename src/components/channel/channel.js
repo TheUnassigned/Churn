@@ -7,7 +7,9 @@ import styles from './channel.css'
 class Channel extends Component {
   constructor (props) {
     super(props)
+
     this.state = {
+      activeVideo: '8LSwyqBLsZ0',
       channelInfo: {
         slug: 'testchannel',
         title: 'Test Channel',
@@ -26,25 +28,25 @@ class Channel extends Component {
             duration: '0:34'
           },
           {
-            channel_position: 0,
+            channel_position: 1,
             youtube_id: 'Dws45IJ_8Io',
             title: 'Test',
             duration: '0:34'
           },
           {
-            channel_position: 0,
+            channel_position: 2,
             youtube_id: 'kvji3CYA51E',
             title: 'Test',
             duration: '0:34'
           },
           {
-            channel_position: 0,
+            channel_position: 3,
             youtube_id: 'SGYhsHH1404',
             title: 'Test',
             duration: '0:34'
           },
           {
-            channel_position: 0,
+            channel_position: 4,
             youtube_id: 'vy_Ca_sCVjs',
             title: 'Merry Christmas',
             duration: '0:18'
@@ -53,16 +55,24 @@ class Channel extends Component {
         videos: ['8LSwyqBLsZ0','Dws45IJ_8Io','kvji3CYA51E','SGYhsHH1404','vy_Ca_sCVjs']
       }
     }
+
+    this.updateActiveVideo = this.updateActiveVideo.bind(this)
+  }
+
+  updateActiveVideo (newId) {
+    this.setState({
+      activeVideo: newId
+    })
   }
 
   render (props, state) {
     return (
       <div class={styles.container}>
         <div class={styles.player}>
-          <Player />
+          <Player activeVideo={state.activeVideo} />
         </div>
         <div class={styles.sidebar}>
-          <Sidebar channelInfo={state.channelInfo} />
+          <Sidebar channelInfo={state.channelInfo} activeVideo={state.activeVideo} onUpdateActiveVideo={this.updateActiveVideo} />
         </div>
       </div>
     )
