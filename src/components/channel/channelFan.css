@@ -1,0 +1,56 @@
+.wrap {
+    padding: 3%;
+}
+.item {
+    display: inline-block;
+    width: 20%;
+    background-color: #CBCBCB;
+    position: relative;
+}
+.item:before {
+    content: "";
+    display: block;
+    padding-top: 56%;
+}
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.cover img {
+    width: 100%;
+    height: auto;
+}
+.coverLeft {
+  transform: perspective(300px) rotateY(30deg) scale(1.2,1.2);
+}
+.coverLeft:hover {
+  transform: perspective(300px) rotateY(25deg) scale(1.3,1.3);
+}
+.coverRight {
+  transform: perspective(300px) rotateY(-30deg) scale(1.2,1.2);
+}
+.coverRight:hover {
+  transform: perspective(300px) rotateY(-25deg) scale(1.3,1.3);
+}
+.coverChannel {
+  transform: scale(1.5, 1.5);
+  z-index: 3;
+}
+.coverChannel:hover {
+  transform: scale(1.6, 1.6);
+}
+.cover1, .cover4 {
+  z-index: 1;
+}
+.cover2, .cover3 {
+  z-index: 2;
+}

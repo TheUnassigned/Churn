@@ -1,5 +1,5 @@
 /** @jsx h */
-import { h, Component } from 'preact'
+import { h } from 'preact'
 import Player from '../player/player'
 import Sidebar from '../sidebar/sidebar'
 import styles from './channel.css'

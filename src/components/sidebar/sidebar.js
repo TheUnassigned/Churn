@@ -1,7 +1,7 @@
 /** @jsx h */
 import { h } from 'preact'
 import Button from '../button/button'
-import ChannelInfo from './channelInfo'
+import ChannelTile from '../channel/channelTile'
 import VideoListing from '../video/videoListing'
 import styles from './sidebar.css'
 
@@ -13,7 +13,7 @@ const Sidebar = ({ channelInfo, activeVideo, onUpdateActiveVideo }) => (
         <Button link='/' text='More channels' />
       </div>
     </div>
-    <ChannelInfo channelInfo={channelInfo} />
+    <ChannelTile channel={channelInfo} />
     <div class={styles.videoList}>
       {channelInfo.recent_videos.map(video => {
         return (

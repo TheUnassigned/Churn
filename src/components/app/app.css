@@ -12,3 +12,14 @@ body {
     line-height: 1.4;
     font-size: 15px;
 }
+
+/* Helpers */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}

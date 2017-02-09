@@ -1,6 +1,7 @@
 /** @jsx h */
 import { h, Component } from 'preact'
 import Channel from '../channel/channel'
+import Channels from '../channels/channels'
 import styles from './app.css'
 import findIndex from 'lodash/findIndex'
 
@@ -165,14 +166,21 @@ class App extends Component {
   }
 
   render (props, state) {
+    const activeChannel = state.channels[state.activeChannel]
     return (
       <div>
+        {/*
         <Channel
-          channel={state.channels[state.activeChannel]}
+          channel={activeChannel}
           activeVideo={state.activeVideo}
           handleUpdateActiveVideo={this.handleUpdateActiveVideo}
           handleVideoEnded={this.handleVideoEnded}
           />
+        */}
+        <Channels
+          channels={state.channels}
+          />
+
       </div>
     )
   }

@@ -1,0 +1,28 @@
+/* Channel fans */
+.favourites {
+
+}
+.channelFanItem {
+    margin-bottom: 50px;
+}
+
+/* Channel Grid */
+.more {
+
+}
+.channelGrid {
+    composes: cf from '../app/app.css';
+    margin-left: -24px;
+}
+.channelGridItem {
+    float: left;
+    padding-left: 24px;
+    margin-bottom: 24px;
+    width: 33.33%;
+    transform: scale(1);
+    transition: transform .3s ease;
+}
+/* Hover state */
+.channelGridItem:hover {
+    transform: scale(1.1);
+}

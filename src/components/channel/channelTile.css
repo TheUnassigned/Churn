@@ -3,8 +3,9 @@
     height: 150px;
     background-size: cover;
     background-color: black;
+    background-position: center;
 }
-.content {
+.overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -15,18 +16,27 @@
     transition: opacity .3s ease;
     color: #FFF;
 }
-.blurb {
+.content {
     position: relative;
     transform: translateY(-50%);
     top: 50%;
-    margin: 10px;
-    font-size: 14px;
-    font-weight: 300;
+    padding: 10px;
     text-align: center;
     text-shadow: 0 1px 1px black;
 }
+.title {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+}
+.blurb {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+}
 
 /* Hover state */
-.wrap:hover .content {
+.wrap:hover .overlay {
     opacity: 1;
 }
