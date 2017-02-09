@@ -2,10 +2,8 @@
 import { h } from 'preact'
 import styles from './button.css'
 
-const Button = props => {
-  return (
-    <a href={props.link} class={styles.btn}>{props.text}</a>
-  )
-}
+const Button = ({ link, text }) => (
+  <a href={link} class={styles.btn}>{text}</a>
+)
 
 export default Button
