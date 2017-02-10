@@ -7,7 +7,7 @@ const VideoListing = ({ video, onSelect, isActive }) => (
     class={styles.wrap}
     onClick={() => onSelect(video.youtube_id)}
     style={{backgroundImage: `url(https://img.youtube.com/vi/${video.youtube_id}/mqdefault.jpg)`}}
-  >
+    >
     <header class={styles.header}>
       <h1 class={styles.title}>
         {video.title}

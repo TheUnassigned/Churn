@@ -16,7 +16,7 @@ class Player extends Component {
     // create promise player on api load and ready
     _this.player = new Promise(resolve => {
       window.onYouTubeIframeAPIReady = () => {
-        const _player = new YT.Player('player', {
+        const _player = new window.YT.Player('player', {
           videoId: this.props.activeVideo,
           playerVars: {
             autoplay: 1,
@@ -25,8 +25,8 @@ class Player extends Component {
             showinfo: 0,
             color: 'white',
             disablekb: 1,
-  					autohide: 1,
-  					iv_load_policy: 3
+            autohide: 1,
+            iv_load_policy: 3
           },
           events: {
             'onReady': e => resolve(_player),
@@ -50,7 +50,7 @@ class Player extends Component {
   }
 
   onPlayerStateChange (e) {
-    if (e.data == YT.PlayerState.ENDED) {
+    if (e.data === YT.PlayerState.ENDED) {
       this.props.onVideoEnded()
     }
   }
