@@ -169,18 +169,18 @@ class App extends Component {
     const activeChannel = state.channels[state.activeChannel]
     return (
       <div>
-        {/*
+
         <Channel
           channel={activeChannel}
           activeVideo={state.activeVideo}
           handleUpdateActiveVideo={this.handleUpdateActiveVideo}
           handleVideoEnded={this.handleVideoEnded}
           />
-        */}
+
+          {/*}
         <Channels
           channels={state.channels}
-          />
-
+          />*/}
       </div>
     )
   }
